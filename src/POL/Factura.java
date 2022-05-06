@@ -8,7 +8,7 @@ package POL;
  *
  * @author ANDY
  */
-public class Factura {
+public class Factura implements PorPagar {
     private String numeroPieza;
     private String descripacionPieza;
     private int cantidad;
@@ -59,7 +59,7 @@ public String ObtenerNumeroPieza(){
         public String toString (){
             //% marca    ----   
             //%s==espera un valor de retorno tipo String, pero tambien agregar un String---%s, d%---regrsar valor tipo entero int, .2f------ valor tipo de double
-            return String.format("%s:\n%s:  %s(%s)\n%s: d% \n%s: $%,.2f","Factura:", "Numero de pieza: ", ObtenerNumeroPieza(),"Cantidad: ",obtenerCantidad(),"Precio por Articulo: ",obtenerPrecioPorArticulo());
+            return String.format("%s:\n%s:  %s(%s)\n%s: d% \n%s: $%,.2f","Factura", "Numero de pieza", ObtenerNumeroPieza(),"Cantidad",obtenerCantidad(),"Precio por Articulo",obtenerPrecioPorArticulo());
         }
         @Override
         public double obtenerMontoPago(){
